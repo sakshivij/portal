@@ -78,13 +78,21 @@ Setup for developers (Windows)
 1. Run `pip install virtualenv` using windows command line
 1. You would have to install PostgreSQL. Download from [official location](https://www.postgresql.org/download/windows/) or alternative location, you could lookup some PostgreSQL tutorials online if you are completely blank on this. 
 1. Clone the repo - `git clone https://github.com/systers/portal.git` and cd into the `portal` directory. Use git CMD or git Bash(unix-like terminal) to do so.
-1. Create a virtual environment with Python 3 and install dependencies, using CMD :
- 
+1. Create a virtual environment with Python 3 and install dependencies. This can be done using git Bash or CMD:
+   
+   For CMD follow these commands:
+     ```bash
+     $ virtualenv venv
+     $ .\venv\Scripts\activate
+     $ pip install -r requirements/dev.txt 
+     ```
+     For Git-Bash follow these commands:
      ```bash
      $ virtualenv venv
      $ ./venv/Scripts/activate
      $ pip install -r requirements/dev.txt 
      ```
+     
 1. Make sure you have GDAL installed. 
 - Download OSGeo4W using the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/wiki)
 - Specifically, install pkg-gdal-python, which is within 'Libs' in the installer tree.
